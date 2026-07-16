@@ -1,7 +1,7 @@
 # Gerado com `pip freeze` do venv da reprodução (%LOCALAPPDATA%\toldbr-repro-venv,
 # Python 3.13.9) em 2026-07-05. Ambiente: Windows 11, RTX 4070 Ti SUPER, CUDA 12.4.
 # Instalação original a partir de requirements.txt (pisos); este arquivo congela as
-# versões efetivamente usadas na execução registrada no REPORT.md (run 2026-06-21).
+# versões efetivamente usadas na execução registrada (run 2026-06-21).
 # Nota: torch==2.6.0+cu124 requer --extra-index-url https://download.pytorch.org/whl/cu124
 accelerate==1.13.0
 aiohappyeyeballs==2.6.2

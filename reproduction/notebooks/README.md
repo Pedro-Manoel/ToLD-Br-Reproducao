@@ -1,7 +1,7 @@
 # Notebooks da reproducao ToLD-Br
 
 Versoes modernizadas (2026) dos notebooks do autor, com diff minimo e mudancas catalogadas em
-`CHANGES.md`. Reproduzem os numeros do artigo 2010.04543v1 (ver `../REPORT.md`).
+`CHANGES.md`. Reproduzem os numeros do artigo 2010.04543v1.
 
 ## Ambiente
 A partir de `reproduction/`, escolha um caminho de setup: **Windows** `.\setup_env.ps1`;

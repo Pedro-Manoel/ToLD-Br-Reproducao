@@ -11,7 +11,6 @@ estritamente necessário, classificando cada mudança como **(T)** tecnologia de
 catalogadas e justificadas em [`notebooks/CHANGES.md`](notebooks/CHANGES.md).
 
 - **Notebooks:** [`notebooks/`](notebooks/) — ver [`notebooks/README.md`](notebooks/README.md)
-- **Relatório de resultados (vs. artigo):** [`REPORT.md`](REPORT.md)
 - **Catálogo de mudanças:** [`notebooks/CHANGES.md`](notebooks/CHANGES.md)
 
 ## Setup
@@ -96,4 +95,3 @@ O `04`, o `07` e o `08` dependem do `03`; os demais são independentes entre si.
 
 - `results/*.json` — métricas de cada experimento
 - `results/figures/*.png` — matrizes de confusão, curva de aprendizado, nuvens de palavras
-- [`REPORT.md`](REPORT.md) — comparação final com os números do artigo

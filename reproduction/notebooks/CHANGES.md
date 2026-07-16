@@ -3,6 +3,7 @@
 ## Kit de reprodução (2026-07-15) — remoções para o pacote publicável
 - **08_compare_figures:** removida a célula da Fig.3 (`compare_fig3_learning_curve.png`, não usada no artigo) — única dependência da pasta do paper e do `pymupdf`; as 4 figuras do artigo seguem geradas.
 - Removidas do kit as pastas `arXiv-2010.04543/` (paper original) e `docs/` (rascunhos/spec/planos).
+- Removidos do kit o `paper.tex` (o artigo é mantido e compilado à parte) e o `REPORT.md` — os resultados e a comparação com o estudo original estão no próprio artigo.
 
 Cada notebook em `reproduction/notebooks/` foi modernizado a partir do original do autor
 (`experiments/*.ipynb`, `model/example.ipynb`) seguindo o princípio **diff mínimo**: só foi
@@ -45,8 +46,8 @@ Observações:
 > **Nota de proveniência:** o notebook `03` também grava esses dois arquivos, pois o
 > `classification.ipynb` do autor inclui os próprios baselines (binário treinado em
 > train+validation=18.900 → macro-F1 0.730; multi-rótulo 90/10, teste=2.100 → Hamming 0.069 /
-> AP 0.209). Na ordem de execução `01 → 02 → 03`, os JSONs persistidos — usados no `REPORT.md`
-> e no artigo de reprodução — são os do `03`; os resultados do `02` (0.728; 0.065/0.199,
+> AP 0.209). Na ordem de execução `01 → 02 → 03`, os JSONs persistidos — usados
+> no artigo de reprodução — são os do `03`; os resultados do `02` (0.728; 0.065/0.199,
 > protocolos do `automl.ipynb`) ficam registrados apenas nas saídas do próprio notebook.
 
 ## 03_classification.ipynb (origem: experiments/classification.ipynb)
@@ -125,13 +126,13 @@ descrição do que ele faz.
 | Item | Descrição |
 |------|-----------|
 | Entrada | `results/preds_binary_mbert_br.csv` (predições do M-BERT-BR, geradas pelo `03_classification`) + `ToLD-BR.csv` binarizado (categorias finas) |
-| Alinhamento | chave de texto normalizada `_norm` (minúsculas + remoção de acentos + remoção de U+FFFD + colapso de espaços), recupera 2100/2100 — ver `REPORT.md` §7.2 |
+| Alinhamento | chave de texto normalizada `_norm` (minúsculas + remoção de acentos + remoção de U+FFFD + colapso de espaços), recupera 2100/2100 |
 | Cálculo | por categoria: positivos no *test*, falsos negativos (positivo predito como não-tóxico), taxa = FN/positivos |
 | Saídas | `results/error_analysis_fn_rate.json` + `results/figures/tab12_fn_rate.png` (barras artigo vs reproduzido) |
 | Resultado | homophobia 7/35 (0.20), insult 74/444 (0.17), xenophobia 9/19 (0.47), misogyny 7/44 (0.16), obscene 119/699 (0.17), racism 7/17 (0.41) — mesmo padrão do artigo (minoritárias com maior FN-rate) |
 
 Pré-requisito: rodar antes o `03_classification.ipynb`. A lógica de alinhamento e cálculo
-(FN-rate por categoria) segue o descrito no `REPORT.md` §7.2.
+(FN-rate por categoria) está descrita nas células do próprio notebook.
 
 ## 08_compare_figures.ipynb (NOVO — extensão; sem original do autor)
 
@@ -151,5 +152,5 @@ original.
 | Dependência | nenhuma além de `requirements.txt` (o `pymupdf` foi removido junto com a Fig. 3) |
 
 Os números do artigo (matrizes das Figuras 2/4 e macro-F1 das Tabelas 7–11) entram **hardcoded** como
-referência, com a mesma proveniência das colunas "Artigo" do `REPORT.md`. Pré-requisito: rodar antes
+referência. Pré-requisito: rodar antes
 o `03_classification.ipynb`.

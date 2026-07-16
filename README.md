@@ -8,7 +8,6 @@ feita a partir dos notebooks originais dos autores, modernizados para 2026 (PyTo
 Transformers + scikit-learn). Todo o material está em [`reproduction/`](reproduction/):
 
 - **Como rodar (Linux/Windows):** [`reproduction/README.md`](reproduction/README.md)
-- **Relatório de resultados (vs. artigo):** [`reproduction/REPORT.md`](reproduction/REPORT.md)
 - **Catálogo de mudanças:** [`reproduction/notebooks/CHANGES.md`](reproduction/notebooks/CHANGES.md)
 
 ---
