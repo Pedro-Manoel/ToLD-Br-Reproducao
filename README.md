@@ -1,6 +1,18 @@
 # Toxic Language Dataset for Brazilian Portuguese (ToLD-Br)
 Repository for ToLD-Br: a dataset with tweets in Brazilian Portuguese annotated according to different toxic aspects.
 
+## Reprodução (2026)
+
+Este repositório também hospeda uma **reprodução computacional** do artigo (Leite et al., 2020),
+feita a partir dos notebooks originais dos autores, modernizados para 2026 (PyTorch + Hugging Face
+Transformers + scikit-learn). Todo o material está em [`reproduction/`](reproduction/):
+
+- **Como rodar (Linux/Windows):** [`reproduction/README.md`](reproduction/README.md)
+- **Relatório de resultados (vs. artigo):** [`reproduction/REPORT.md`](reproduction/REPORT.md)
+- **Catálogo de mudanças:** [`reproduction/notebooks/CHANGES.md`](reproduction/notebooks/CHANGES.md)
+
+---
+
 ## Dataset
 * ToLD-BR.csv - Each column has a value from 0 to 3 representing the number of times this example got flagged as toxic.
 * ToLD-BR_alpha.csv - Annotations are not aggregated for each class, so values are either 0 or 1 and each class has 3 columns.
